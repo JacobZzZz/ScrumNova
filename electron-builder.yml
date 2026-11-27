@@ -1,0 +1,25 @@
+appId: com.jacob.scrumnova
+productName: ScrumNova
+directories:
+  buildResources: resources
+  output: dist
+files:
+  - out/**/*
+extraResources:
+  - from: resources/bin
+    to: bin
+    filter:
+      - "**/*"
+mac:
+  category: public.app-category.productivity
+  icon: resources/icon.png
+  target:
+    - target: dmg
+      arch:
+        - arm64
+win:
+  icon: resources/icon.png
+  target:
+    - target: nsis
+      arch:
+        - x64
